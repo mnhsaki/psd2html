@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HOTEL DELUX</title>
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			outline: 0px;
+		}
+		
+		.left {
+			float: left;
+		}
+		
+		.right {
+			float: right;
+		}
+		
+		.clearfix {
+			clear: both;
+		}
+		
+		#room_type {}
+		
+		.header_section {
+			min-height: 75px;
+			width: 100%;
+			background-color: #2A2E33;
+		}
+		
+		.cotainer {
+			width: 85%;
+			margin: 0px auto;
+		}
+		
+		.logo {
+			width: 30%;
+		}
+		
+		.logo img {
+			height: 20px;
+			padding: 25px 5px;
+		}
+		
+		.logo p {
+			padding: 25px 5px;
+			color: #fff;
+		}
+		
+		.menu_section {
+			width: 70%;
+			min-height: 75px;
+			float: right;
+		}
+		
+		.menu_bar {}
+		
+		.menu_bar ul {}
+		
+		.menu_bar ul li {
+			list-style: none;
+			float: left;
+		}
+		
+		.menu_bar ul li a {
+			color: #fff;
+			text-decoration: none;
+			display: block;
+			padding: 27px 10px;
+			margin-right: 10px;
+			font-size: 12px;
+		}
+		
+		.menu_bar ul li a:hover {
+			background-color: #000000;
+			transform: scale(1);
+			transition: 0.5s;
+		}
+		
+		.slyder_section {
+			min-height: 300px;
+			margin: 0px;
+			padding: 0px;
+			/*	position: relative;*/
+		}
+		
+		.slyder_img {
+			height: 413px;
+		}
+		
+		.slyder_img img {
+			min-height: 380px;
+			width: 100%;
+		}
+		
+		.boking_bar_section {}
+		
+		.inquery_box {
+			width: 60%;
+			height: 89px;
+			background: #2A2D32;
+			position: absolute;
+			margin-top: -56px;
+			right: 260px;
+			box-shadow: 0px 14px 20px 0px #000;
+			overflow: hidden;
+		}
+		
+		.input_1 {
+			width: 200px;
+			height: 30px;
+			border: 0px;
+			border-radius: 5px;
+			margin-left: 8px;
+			outline: none;
+			font-size: 14px;
+			text-indent: 24px;
+			margin: 0px auto;
+			background: white;
+		}
+		
+		.input2 {
+			width: 200px;
+			height: 30px;
+			margin: 0px auto;
+			background: white;
+			border: 0px;
+			border-radius: 5px;
+			margin-left: 8px;
+			outline: none;
+			font-size: 14px;
+			font-family: sans-serif;
+		}
+		
+		.form-group {
+			width: 20%;
+			height: 60px;
+			margin-top: 13px;
+			float: left;
+			position: relative;
+			margin-left: 5px;
+			margin-right: 55px;
+		}
+		
+		.form-group p {
+			margin: 0;
+			color: yellow;
+			text-indent: 10px;
+		}
+		
+		.button {
+			width: 17px;
+			height: 19px;
+			margin-top: -22px;
+			border: 0px;
+			outline: none;
+			position: absolute;
+			left: 6px;
+			background: url(calender.png) no-repeat;
+		}
+		
+		.select_style {
+			width: 21%;
+			height: 60px;
+			margin-top: 13px;
+			float: left;
+			margin-right: 59px;
+		}
+		
+		.select_style p {
+			margin: 0;
+			color: yellow;
+			text-indent: 10px;
+		}
+		
+		.price_button {
+			width: 15%;
+			height: 34px;
+			margin: 30px 0;
+			float: left;
+			background-color: #FFD701;
+			border-radius: 5px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		
+		.price_button a {
+			text-decoration: none;
+			color: #000;
+			font-family: sans-serif;
+			font-size: 16px;
+		}
+		
+		.bokking_section {
+			height: 455px;
+			margin: 0px auto;
+			background-image: url(bg1.png);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			overflow: hidden;
+		}
+		
+		.book_packge {
+			height: 100px;
+			margin: 23px auto;
+		}
+		
+		.book_packge h2 {
+			margin-top: 100px;
+			text-align: center;
+			font-size: 50px;
+			font-family: 'Great Vibes', cursive;
+		}
+		
+		.book_packge p {
+			text-align: center;
+			color: #000;
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+		
+		.slyder_2 {
+			margin-left: 180px;
+		}
+		
+		.slyder_2 img {
+			height: 180px;
+			width: 180px;
+			border-radius: 90px;
+			margin: 10px
+		}
+		
+		.aroo_icon {}
+		
+		.aroo_icon img {
+			width: 40px;
+			height: 65px;
+			margin-top: 70px;
+			margin-right: 50px;
+		}
+		
+		.aroo_icon_2 {}
+		
+		.aroo_icon_2 img {
+			width: 40px;
+			height: 65px;
+			margin-top: 70px;
+			margin-left: 50px;
+		}
+		
+		.room_type {
+			width: 100%;
+			height: 895px;
+			margin: 0px auto;
+			background-image: url(bg2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			overflow: hidden;
+		}
+		
+		.room_title {
+			width: 70%;
+			height: 70px;
+			margin: 0px auto;
+		}
+		
+		.room_title h2 {
+			margin-top: 100px;
+			text-align: center;
+			font-size: 50px;
+			font-family: 'Great Vibes', cursive;
+		}
+		
+		.room_sec {
+			width: 100%;
+			height: 300px;
+			margin: 10px auto;
+			float: left;
+		}
+		
+		.singel_room {
+			width: 30%;
+			height: 300px;
+			margin: 0px 5px 0 28px;
+			float: left;
+		}
+		
+		.singel_room:hover {
+			transform: scale(1.1);
+			transition: 1.2s;
+		}
+		
+		.singel_img {
+			width: 100%;
+			height: 180px;
+			margin: 0px;
+			float: left;
+		}
+		
+		.singel_img img {
+			width: 100%;
+			height: 180px;
+		}
+		
+		.room_name {
+			width: 100%;
+			height: 80px;
+			margin: 0px;
+			float: left;
+		}
+		
+		.room_name h3 {
+			margin: 5px;
+			text-align: center;
+			font-size: 20px;
+			font-family: serif;
+			font-weight: normal;
+		}
+		
+		.room_name p {
+			margin: 0px;
+			text-align: center;
+		}
+		
+		.img_icon {
+			width: 100%;
+			height: 40px;
+			margin: 0px;
+			float: left;
+		}
+		
+		.icon {
+			width: 43%;
+			height: 20px;
+			margin: 12px auto;
+		}
+		
+		.contain {
+			width: 100%;
+			margin: 0px auto;
+			position: relative;
+			background-color: #FFD701;
+		}
+		
+		.info_box {
+			width: 80%;
+			height: 180px;
+			margin: 0px auto;
+			background-color: #FFD701;
+			overflow: hidden;
+		}
+		
+		.info_text {
+			width: 75%;
+			height: 100px;
+			margin: 50px 20px;
+			float: left;
+			background-color: ;
+		}
+		
+		.info_text h2 {
+			font-size: 34px;
+			margin-left: 15px;
+			color: #fff;
+			font-family: sans-serif;
+			font-weight: normal;
+		}
+		
+		.info_text p {
+			font-size: 18px;
+			margin: 15px;
+			color: #fff;
+			font-style: italic;
+			font-family: sans-serif;
+			font-weight: normal;
+		}
+		
+		.person {
+			width: 25%;
+			height: 200px;
+			margin: 0px;
+			float: right;
+		}
+		
+		.person_img {
+			width: 22.5%;
+			height: 205px;
+			margin: 0px;
+			position: absolute;
+			top: -104px;
+			right: 61px;
+		}
+		
+		.footer_section {
+			width: 100%;
+			background-color: #333333;
+			margin: 0;
+			overflow: hidden;
+		}
+		
+		.footer {
+			width: 90%;
+			height: 350px;
+			margin: 0px auto;
+		}
+		
+		.footer_Style1 {
+			width: 20%;
+			height: 250px;
+			margin: 25px 5px 0px 10px;
+			float: left;
+			outline: none;
+		}
+		
+		.footer_Style2 {
+			width: 34%;
+			height: 250px;
+			margin: 25px 5px 0px 5px;
+			float: left;
+			outline: none;
+		}
+		
+		.footer_Style1 h3 {
+			font-size: 18px;
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		
+		.footer_Style1 p {
+			font-size: 15px;
+			color: #fff;
+			text-align: left;
+		}
+		
+		.footer_Style2 h3 {
+			font-size: 18px;
+			color: #fff;
+			padding-bottom: 20px;
+		}
+		
+		.about_Text {
+			width: 100%;
+			height: 192px;
+		}
+		
+		.news_Text {
+			width: 100%;
+			height: 192px;
+		}
+		
+		.news_Text a {
+			color: #FFD701;
+			text-decoration: none;
+		}
+		
+		.deluxe-hotels {
+			width: 100%;
+			height: 192px;
+		}
+		
+		.member_area {
+			width: 100%;
+			height: 192px;
+		}
+		
+		.footer_Style2 p {
+			font-size: 15px;
+			color: #fff;
+			text-align: left;
+		}
+		
+		.user {
+			width: 180px;
+			height: 30px;
+			border-radius: 8px;
+			border: 1px solid #272626;
+			background-color: #333333;
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+		
+		label {
+			font-size: 16px;
+			color: white;
+		}
+		
+		.form-groups {
+			width: 100%;
+			height: 180px;
+			margin-bottom: 10px;
+		}
+		
+		.login-btn {
+			width: 100px;
+			height: 30px;
+			margin-left: 14px;
+			margin-top: 10px;
+			background: yellow;
+			border: 0px;
+			border-radius: 8px;
+			color: #080606;
+			font-size: 16px;
+			font-weight: 550;
+		}
+		
+		.login-btn a {
+			text-decoration: none;
+			text-align: center;
+			color: #000;
+		}
+		
+		.read-more {
+			width: 100px;
+			height: 30px;
+			margin-left: 14px;
+			margin-top: 30px;
+			background: yellow;
+			border: 0px;
+			border-radius: 8px;
+			color: #080606;
+			font-size: 16px;
+			font-weight: 550;
+		}
+		
+		.read-more a {
+			text-decoration: none;
+			text-align: center;
+			color: #000;
+		}
+		
+		.boder_bottom {
+			height: 40px;
+			background-color: #1F1F1F;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="header_section">
+		<div class="cotainer">
+			<div class="logo left">
+				<div class="left">
+					<a href="#"><img src="hd.png" alt=""></a>
+				</div>
+				<div class="left">
+					<p><i>hotel and motel them</i></p>
+				</div>
+			</div>
+			<div class="menu_section">
+				<div class="menu_bar right">
+					<ul>
+						<li><a href="#">START</a></li>
+						<li><a href="#">FACILITIES</a></li>
+						<li><a href="#">RESTAURANT</a></li>
+						<li><a href="#">CONFERERNCE</a></li>
+						<li><a href="#">BOOKING</a></li>
+						<li><a href="#">CONTACT US</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slyder_section clearfix">
+		<div class="slyder_img">
+			<img src="07.jpg" alt="Image Mising">
+		</div>
+	</div>
+	<div class="boking_bar_section cotainer">
+		<div class="inquery_box">
+			<div class="form-group">
+				<p>Arrival</p>
+				<input type="text" class="input_1" placeholder="01/07/2017">
+				<button type="submit" class="button"></button>
+			</div>
+			<div class="form-group">
+				<p>Deprature</p>
+				<input type="text" class="input_1" placeholder="01/07/2017">
+				<button type="submit" class="button"></button>
+			</div>
+			<div class="select_style">
+				<p>Room Type</p>
+				<select class="input2">
+							<option>Standard single room</option>
+							<option>Standard Luxury Room</option>
+							<option>Luxury single Room</option>
+							<option>Luxury Luxury Room</option>
+							<option>Luxury Room</option>
+							<option></option>
+						</select>
+			</div>
+
+			<div class="price_button">
+				<a href="#">View Price</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="bokking_section">
+		<div class="cotainer">
+
+			<div class="book_packge clearfix">
+				<!--If font type is fund then edite it.-->
+				<h2>Book A Package</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quisquam sit suscipit cumque nesciunt tenetur dignissimos obcaecati? Cupiditate nesciunt, expedita harum neque aspernatur porro quos sit temporibus obcaecati molestias totam eveniet perferendis cumque minima consequatur consequuntur perspiciatis sunt nemo corporis.</p>
+
+				<div class="slyder_2">
+					<div class="aroo_icon left">
+						<a href="#"><img src="leftarros.png" alt="Images Missing"></a>
+					</div>
+					<div class="singel_package left">
+						<a href="#"><img src="p1.jpg" alt="Images Missing"></a>
+					</div>
+					<div class="singel_package left">
+						<a href="#"><img src="p2.jpg" alt="Images Missing"></a>
+					</div>
+					<div class="singel_package left">
+						<a href="#"><img src="p3.jpg" alt="Images Missing"></a>
+					</div>
+					<div class="aroo_icon_2 left">
+						<a href="#"><img src="rightarros.png" alt="Images Missing"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="room_type">
+		<div class="cotainer">
+			<div class="room_title">
+				<h2>Our Room Types</h2>
+			</div>
+			<div class="room_sec">
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room1.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>VIP Room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="img_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+
+						</div>
+					</div>
+				</div>
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room2.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>Family Room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="img_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+						</div>
+					</div>
+				</div>
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room3.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>Standard Double Room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="img_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="properties_box">
+
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room4.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>Supperior Double room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="imag_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+						</div>
+					</div>
+				</div>
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room5.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>Standar Single Room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="img_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+						</div>
+					</div>
+				</div>
+				<div class="singel_room">
+					<div class="singel_img">
+						<img src="room6.jpg" alt="">
+					</div>
+					<div class="room_name">
+						<h3>Superior Single Room</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun.
+						</p>
+					</div>
+					<div class="img_icon">
+						<div class="icon">
+							<img src="fan.png" alt="Images Missing">
+							<img src="aircon.png" alt="Images Missing">
+							<img src="iron.png" alt="Images Missing">
+							<img src="tv.png" alt="Images Missing">
+							<img src="wifi.png" alt="Images Missing">
+							<img src="coffe.png" alt="Images Missing">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contain">
+		<div class="info_box">
+			<div class="info_text">
+				<h2>143 City Located Hotels World Wide</h2>
+				<p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit consectetur adipisicing elit. Earum, doloribus.</p>
+			</div>
+			<div class="person">
+				<div class="person_img">
+					<img src="http://s2.postimg.org/5senbl5zd/person.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_section">
+		<div class="container">
+			<div class="footer">
+				<div class="footer_Style1">
+					<h3>ABOUT THIS HOTEL</h3>
+					<div class="about_Text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam consequat.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, Ut enim ad minim veniam consequat.
+						</p>
+					</div>
+				</div>
+				<div class="footer_Style1">
+					<h3>LATEST NEWS</h3>
+					<div class="news_Text">
+						<p>
+							Lorem ipsum dolor dolor sit amet. <br>
+							<a href="">01 JULY</a>
+						</p>
+						<p>
+							Lorem ipsum dolor dolor sit amet. <br>
+							<a href="">02 JULY</a>
+						</p>
+						<p>
+							Lorem ipsum dolor dolor sit amet. <br>
+							<a href="">03 JULY</a>
+						</p>
+						<p>
+							Lorem ipsum dolor dolor sit amet. <br>
+							<a href="">04 JULY</a>
+						</p>
+						<p>
+							Lorem ipsum dolor dolor sit amet. <br>
+							<a href="">05 JULY</a>
+						</p>
+					</div>
+				</div>
+				<div class="footer_Style2">
+					<h3>JOIN DELUXE HOTELS</h3>
+					<div class="deluxe-hotels">
+						<p>
+							Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<button type="submit" class="read-more"><a href="">Read more</a></button>
+					</div>
+				</div>
+				<div class="footer_Style1">
+					<h3>MEMBERS AREA</h3>
+					<div class="member_area">
+						<form>
+							<div class="form-groups">
+								<label>Username</label>
+								<input type="text" class="user" placeholder="">
+
+								<label>Password</label>
+								<input type="password" class="user" placeholder="">
+								<button type="submit" class="login-btn"><a href="">Login</a></button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="boder_bottom">
+
+	</div>
+
+</body>
+
+</html>
